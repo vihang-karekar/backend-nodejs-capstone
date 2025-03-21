@@ -24,6 +24,7 @@ module.exports = {
   rules: {
     'indent': 'off',
     'quote-props': 'off',
-    'key-spacing': 'off'
+    'key-spacing': 'off',
+    'n/no-path-concat': 'off'
   }
 }
