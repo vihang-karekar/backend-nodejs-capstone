@@ -22,6 +22,8 @@ module.exports = {
     ecmaVersion: 'latest'
   },
   rules: {
-    'indent': 'off'
+    'indent': 'off',
+    'quote-props': 'off',
+    'key-spacing': 'off'
   }
 }
