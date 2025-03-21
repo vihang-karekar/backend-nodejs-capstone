@@ -12,7 +12,7 @@ router.get('/', async (req, res, next) => {
         const collection = db.collection('secondChanceItems')
 
         // Initialize the query object
-        let query = {}
+        const query = {}
 
         // Add the name filter to the query if the name parameter is not empty
         if (req.query.name && req.query.name.trim() !== '') {
@@ -29,10 +29,10 @@ router.get('/', async (req, res, next) => {
         if (req.query.age_years) {
             query.age_years = { $lte: parseInt(req.query.age_years) }
         }
-        
+
         // Task 4: Fetch filtered gifts using the find(query) method. Make sure to use await and store the result in the `gifts` constant
         const gifts = await collection.find(query).toArray()
-        
+
         res.json(gifts)
     } catch (e) {
         next(e)
